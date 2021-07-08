@@ -1,0 +1,12 @@
+.git
+.gitignore
+redis_data/
+
+__pycache__
+*.py[cod]
+
+*.log
+venv/
+.idea/
+.vscode/
+.devcontainer

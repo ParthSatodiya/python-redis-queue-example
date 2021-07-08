@@ -1,0 +1,12 @@
+services:
+    code:
+        build: 
+            context: .
+            dockerfile: ./.devcontainer/Dockerfile
+            args:
+                VARIANT: "3.9"
+                INSTALL_NODE: "false"
+        volumes: 
+            - ./:/vscode
+        # Overrides default command so things don't shut down after the process ends.
+        command: /bin/sh -c "while sleep 1000; do :; done"
